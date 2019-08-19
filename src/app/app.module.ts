@@ -1,8 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-import { AppRoutingModule } from './app-routing.module';
+import { LoggingModule} from './myComponent/logging/logging.module';
 import { AppComponent } from './app.component';
+import { RoutingModule } from './App.Routing.Module';
+import { HttpClientModule } from '@angular/common/http';
+import { UsersService } from './myService/users.service';
+
+
 
 @NgModule({
   declarations: [
@@ -10,9 +14,11 @@ import { AppComponent } from './app.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    LoggingModule,
+    RoutingModule,
+    HttpClientModule 
   ],
-  providers: [],
+  providers: [UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

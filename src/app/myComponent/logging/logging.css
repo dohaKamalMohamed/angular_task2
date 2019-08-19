@@ -1,0 +1,31 @@
+#formContent{
+    width: 50%;
+    margin: 0px auto;
+    border:#56baed 1px solid;
+    border-radius: 10px 10px 10px 10px;
+    -webkit-box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    box-shadow: 0 30px 60px 0 rgba(0,0,0,0.3);
+    text-align: center;
+}
+
+form{
+    width: 60%;
+    margin: 10px auto;
+}
+
+input ,.form-group , #formFooter{
+    margin: 8px;
+}
+
+button{
+    background-color: #56baed;
+    color: aliceblue;
+}
+
+p{
+    color: red;
+}
+
+#formFooter a{
+    margin: 10px;
+}

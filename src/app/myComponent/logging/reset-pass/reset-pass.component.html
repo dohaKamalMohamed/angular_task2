@@ -1,0 +1,27 @@
+<div id="formContent">
+        <form name="form"  #f="ngForm">
+            <!-- password -->
+            <input type="password" class="form-control" placeholder="Enter your password" name="pass" ngModel
+                #pass="ngModel" required pattern="[a-zA-Z]*">
+            <div *ngIf="pass.invalid && pass.touched">
+                <p *ngIf="pass.errors?.required"> please enter your password</p>
+                <p *ngIf="pass.errors?.pattern"> invalid password </p>
+            </div>
+            <!-- end password -->
+            <!-- confirm password -->
+            <input type="password" class="form-control" placeholder="Confirm your password" name="pas" ngModel
+                #pas="ngModel" required [equalTo]="pass">
+            <div *ngIf="pas.invalid && pas.touched">
+                <p *ngIf="pas.errors?.required"> please confirm your password</p>
+                <p *ngIf="pas.errors?.equalTo"> password does't match</p>
+            </div>
+            
+            
+            <!-- end confirm password -->
+            <button type="submit" class="btn" [disabled]="f.form.invalid">Reset</button>
+    
+            <div id="formFooter">
+                    <a routerLink="/login">log in?</a>
+            </div>
+        </form>
+    </div>
